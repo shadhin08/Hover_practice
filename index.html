@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Practice</title>
+    <style>
+        .photo-frame
+        {
+            height: 200px;
+            width: 300px;
+            border: 5px solid black;
+            position: relative;
+            overflow: hidden;
+        }
+        .photo img
+        {
+            width: 100%;
+            transition: transform 1s;
+        }
+        .photo-detail
+        {
+            position: absolute;
+            height: 200px;
+            width: 300px;
+            top: 200px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            transition: top 1s;       
+        }
+        .photo-frame:hover .photo-detail
+        {
+            top: 0px;
+            transition: background-image, 1s;
+            background-image: linear-gradient(360deg, rgba(59, 223, 245, 0.8), rgba(15, 64, 224, 0.233));
+        }
+        .photo-frame:hover .photo img
+        {
+            transform: scale(1.5);
+            transition: transform 3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-album">
+        <h1>Photo album</h1>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="media/sajek-girl.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Sajek Valley</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure animi optio esse ratione distinctio?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
